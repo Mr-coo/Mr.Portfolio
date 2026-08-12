@@ -49,39 +49,38 @@ export function Experience(){
             <div className="w-4/5 flex justify-start items-start gap-3 flex-col py-10">
                 <pre className="font-mono text-cmdlet whitespace-pre text-[10px]">{Title}</pre>
                 <div className="w-full border-t-2 border-dashed mb-10"></div>
-                {experiences.map((exp, i) => {
-                    const isEven = i % 2 === 0;
-                    return (
-                        <div
-                            key={i}
-                            className={`py-4 flex items-start w-full gap-10 ${
-                                isEven ? "flex-row" : "flex-row-reverse"
-                            }`}
-                        >
-                            <div className="w-[40%]">
-                                <div className="flex items-baseline gap-3">
-                                    <span className="text-muted font-mono text-sm">
-                                        {String(i + 1).padStart(2, "0")}.
-                                    </span>
-                                    <h1 className="text-3xl font-bold border-b-2 p-2 text-cmdlet">
-                                        {exp.title}
-                                    </h1>
+                <div className='flex flex-col justify-center gap-20'>
+                    {experiences.map((exp, i) => {
+                        const isEven = i % 2 === 0;
+                        return (
+                            <div
+                                key={i}
+                                className={`py-4 flex justify-between items-start w-full gap-10 ${
+                                    isEven ? "flex-row" : "flex-row-reverse"
+                                }`}
+                            >
+                                <div className="w-[45%]">
+                                    <div className="flex items-baseline gap-3">
+                                        <h1 className="text-3xl font-bold border-b-2 p-2 text-cmdlet">
+                                            {exp.title}
+                                        </h1>
+                                    </div>
+                                    <h3 className="text-lg py-5 text-param">{exp.description}</h3>
+                                    <p>{exp.body}</p>
+                                    <div className="py-5 flex flex-wrap gap-x-5 justify-start items-center">
+                                        {exp.tags.map((tag) => (
+                                            <SmallCard key={tag} text={tag} />
+                                        ))}
+                                    </div>
+                                    <div className={`flex ${isEven ? "justify-end" : "justify-start"}`}>
+                                        <Button text="Github" logo={<SiGithub size={18} />} />
+                                    </div>
                                 </div>
-                                <h3 className="text-lg py-5 text-param">{exp.description}</h3>
-                                <p>{exp.body}</p>
-                                <div className="py-5 flex flex-wrap gap-x-5 justify-start items-center">
-                                    {exp.tags.map((tag) => (
-                                        <SmallCard key={tag} text={tag} />
-                                    ))}
-                                </div>
-                                <div className={`flex ${isEven ? "justify-end" : "justify-start"}`}>
-                                    <Button text="Github" logo={<SiGithub size={18} />} />
-                                </div>
+                                <ImageFrame src={dummy} alt={exp.title} classname="w-[45%]" />
                             </div>
-                            <ImageFrame src={dummy} alt={exp.title} classname="w-[55%]" />
-                        </div>
-                    );
-                })}
+                        );
+                    })}
+                </div>
             </div>
         </div>
     )

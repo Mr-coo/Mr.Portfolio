@@ -8,13 +8,13 @@ interface ImageFrameProps {
 
 export function ImageFrame({ src, alt, classname = "" }: ImageFrameProps) {
   return (
-    <div className={`${classname} relative bg-black/20 shadow-lg aspect-video overflow-hidden`}>
+    <div className={`${classname} group relative bg-black/20 shadow-lg aspect-video overflow-hidden cursor-pointer`}>
       <Image
         src={src}
         alt={alt}
         fill
         sizes="(max-width: 768px) 100vw, 50vw"
-        className="object-cover z-0 brightness-90 contrast-110 saturate-75"
+        className="object-cover z-0 brightness-90 contrast-110 saturate-75 transition-transform duration-500 ease-out group-hover:scale-110"
       />
 
       <div
@@ -25,20 +25,20 @@ export function ImageFrame({ src, alt, classname = "" }: ImageFrameProps) {
         }}
       />
 
-      <div className="absolute z-20 top-0 left-0 p-2 text-border font-mono text-2xl leading-none">
-        ┌───
+      <div className="absolute z-20 inset-4 pointer-events-none border border-cmdlet/30 transition-all duration-500 ease-out group-hover:inset-6">
+        <div className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 text-border font-mono text-2xl leading-none">
+          ┌
+        </div>
+        <div className="absolute top-0 right-0 translate-x-1/2 -translate-y-1/2 text-border font-mono text-2xl leading-none">
+          ┐
+        </div>
+        <div className="absolute bottom-0 left-0 -translate-x-1/2 translate-y-1/2 text-border font-mono text-2xl leading-none">
+          └
+        </div>
+        <div className="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 text-border font-mono text-2xl leading-none">
+          ┘
+        </div>
       </div>
-      <div className="absolute z-20 top-0 right-0 p-2 text-border font-mono text-2xl leading-none">
-        ───┐
-      </div>
-      <div className="absolute z-20 bottom-0 left-0 p-2 text-border font-mono text-2xl leading-none">
-        └───
-      </div>
-      <div className="absolute z-20 bottom-0 right-0 p-2 text-border font-mono text-2xl leading-none">
-        ───┘
-      </div>
-
-      <div className="absolute inset-0 z-20 border border-cmdlet/30 pointer-events-none" />
     </div>
   );
 }
