@@ -11,42 +11,56 @@ export function Navigation() {
   const [active, setActive] = useState(sections[0].id);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            setActive(entry.target.id);
-          }
+    const handleScroll = () => {
+      const midY = window.innerHeight / 2;
+      let current = sections[0].id;
+      for (const { id } of sections) {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top <= midY) {
+          current = id;
         }
-      },
-      { threshold: 0.5 },
-    );
+      }
+      setActive(current);
+    };
 
-    for (const { id } of sections) {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    }
-
-    return () => observer.disconnect();
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <nav className="fixed right-10 top-1/2 -translate-y-1/2 z-50">
-      <ul className="flex flex-col items-end gap-4 list-none">
-        {sections.map(({ id, label }) => (
-          <li key={id}>
-            <a
-              href={`#${id}`}
-              className={`transition-all duration-100 ${
-                active === id
-                  ? "text-foreground text-lg"
-                  : "text-base text-muted hover:text-foreground"
-              }`}
-            >
-              {label}
-            </a>
-          </li>
-        ))}
+    <nav className="fixed right-8 top-1/2 -translate-y-1/2 z-50">
+      <ul className="flex flex-col items-end gap-6 list-none">
+        {sections.map(({ id, label }) => {
+          const isActive = active === id;
+          return (
+            <li key={id}>
+              <a
+                href={`#${id}`}
+                className={`flex items-center gap-3 group transition-all duration-300 ${
+                  isActive ? "text-cmdlet" : "text-foreground hover:text-foreground"
+                }`}
+              >
+                <span
+                  className={`font-mono transition-all duration-300 ${
+                    isActive
+                      ? "opacity-100 text-lg"
+                      : "opacity-50 group-hover:opacity-100 text-base"
+                  }`}
+                >
+                  {label}
+                </span>
+                <span
+                  className={`block transition-all duration-300 ${
+                    isActive
+                      ? "w-8 h-0.5 bg-cmdlet"
+                      : "w-4 h-0.5 bg-muted group-hover:w-6 group-hover:bg-foreground"
+                  }`}
+                />
+              </a>
+            </li>
+          );
+        })}
       </ul>
     </nav>
   );
