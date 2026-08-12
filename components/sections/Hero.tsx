@@ -14,7 +14,7 @@ export function Hero(){
 88     \`8'     88  \`"8bbdP"Y8  88           \`"Ybbd8"'   \`"YbbdP"'      88888888888  88  88       88  \`"8bbdP"Y8  88           \`"8bbdP"Y8  88`
 
     return (
-        <div className="flex w-full h-screen items-center justify-center">
+        <div id="hero" className="flex w-full h-screen items-center justify-center scroll-mt-10">
             <div className="w-3/5 flex justify-center items-start gap-3 flex-col">
                 <h2 className="text-2xl">Hello, I am</h2>
                 <pre className="font-mono text-cmdlet whitespace-pre text-xs">{heroTitle}</pre>

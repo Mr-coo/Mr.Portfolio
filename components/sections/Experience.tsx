@@ -18,7 +18,7 @@ export function Experience(){
                           88 `
 
     return (
-        <div className="flex w-full h-screen items-center justify-center overflow-x-hidden">
+        <div id="experience" className="flex w-full h-screen items-center justify-center overflow-x-hidden scroll-mt-10">
             <div className="w-4/5 h-full flex justify-start items-start gap-3 flex-col py-10">
                 <pre className="font-mono text-cmdlet whitespace-pre text-[10px]">{Title}</pre>
                 <div className="w-full border-t-2 border-dashed mb-10"></div>
