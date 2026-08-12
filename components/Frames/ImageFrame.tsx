@@ -8,7 +8,7 @@ interface ImageFrameProps {
 
 export function ImageFrame({ src, alt, classname = "" }: ImageFrameProps) {
   return (
-    <div className={`${classname} relative bg-black/20 shadow-lg`}>
+    <div className={`${classname} relative bg-black/20 shadow-lg aspect-video overflow-hidden`}>
       <Image
         src={src}
         alt={alt}

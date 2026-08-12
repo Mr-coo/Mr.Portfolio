@@ -4,42 +4,84 @@ import { SmallCard } from '../cards/SmallCard'
 import { Button } from '../buttons/Button'
 import { SiGithub } from 'react-icons/si';
 
+const experiences = [
+    {
+        title: "Experience 1",
+        description: "Full-Stack Developer",
+        body: "Built and maintained scalable web applications using modern frameworks. Collaborated with cross-functional teams to deliver features on tight deadlines while ensuring code quality through testing and reviews.",
+        tags: ["Nest.js", "React", "Docker", "gRPC", "Postgres SQL"],
+    },
+    {
+        title: "Experience 2",
+        description: "Backend Engineer",
+        body: "Designed and implemented RESTful APIs and microservices architecture. Optimized database queries and improved system reliability through monitoring, alerting, and automated deployment pipelines.",
+        tags: ["Go", "Kubernetes", "Redis", "MongoDB", "Kafka"],
+    },
+    {
+        title: "Experience 3",
+        description: "Frontend Developer",
+        body: "Developed responsive user interfaces and interactive dashboards. Worked closely with designers to translate Figma mockups into pixel-perfect components with smooth animations and accessibility support.",
+        tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    },
+    {
+        title: "Experience 4",
+        description: "DevOps Engineer",
+        body: "Managed CI/CD pipelines and cloud infrastructure across multiple environments. Automated provisioning and deployment processes, reducing release cycles and improving overall system uptime.",
+        tags: ["AWS", "Terraform", "GitHub Actions", "Docker", "Linux"],
+    },
+];
+
 export function Experience(){
     const Title =
-`88888888888                                                    88                                                   
-88                                                             ""                                                   
-88                                                                                                                  
-88aaaaa      8b,     ,d8  8b,dPPYba,    ,adPPYba,  8b,dPPYba,  88   ,adPPYba,  8b,dPPYba,    ,adPPYba,   ,adPPYba,  
-88"""""       \`Y8, ,8P'   88P'    "8a  a8P_____88  88P'   "Y8  88  a8P_____88  88P'   \`"8a  a8"     ""  a8P_____88  
-88              )888(     88       d8  8PP"""""""  88          88  8PP"""""""  88       88  8b          8PP"""""""  
-88            ,d8" "8b,   88b,   ,a8"  "8b,   ,aa  88          88  "8b,   ,aa  88       88  "8a,   ,aa  "8b,   ,aa  
-88888888888  8P'     \`Y8  88\`YbbdP"'    \`"Ybbd8"'  88          88   \`"Ybbd8"'  88       88   \`"Ybbd8"'   \`"Ybbd8"'  
-                          88                                                                                        
+`88888888888                                                    88
+88                                                             ""
+88
+88aaaaa      8b,     ,d8  8b,dPPYba,    ,adPPYba,  8b,dPPYba,  88   ,adPPYba,  8b,dPPYba,    ,adPPYba,   ,adPPYba,
+88"""""       \`Y8, ,8P'   88P'    "8a  a8P_____88  88P'   "Y8  88  a8P_____88  88P'   \`"8a  a8"     ""  a8P_____88
+88              )888(     88       d8  8PP"""""""  88          88  8PP"""""""  88       88  8b          8PP"""""""
+88            ,d8" "8b,   88b,   ,a8"  "8b,   ,aa  88          88  "8b,   ,aa  88       88  "8a,   ,aa  "8b,   ,aa
+88888888888  8P'     \`Y8  88\`YbbdP"'    \`"Ybbd8"'  88          88   \`"Ybbd8"'  88       88   \`"Ybbd8"'   \`"Ybbd8"'
+                          88
                           88 `
 
     return (
-        <div id="experience" className="flex w-full h-screen items-center justify-center overflow-x-hidden scroll-mt-10">
-            <div className="w-4/5 h-full flex justify-start items-start gap-3 flex-col py-10">
+        <div id="experience" className="flex w-full min-h-screen items-center justify-center overflow-x-hidden scroll-mt-10">
+            <div className="w-4/5 flex justify-start items-start gap-3 flex-col py-10">
                 <pre className="font-mono text-cmdlet whitespace-pre text-[10px]">{Title}</pre>
                 <div className="w-full border-t-2 border-dashed mb-10"></div>
-                <div className="py-4 flex justify-between items-start w-full gap-10">
-                    <div className='w-[40%]'>
-                        <h1 className="text-3xl font-bold border-b-2 p-2 text-cmdlet">Experience 1</h1>
-                        <h3 className="text-lg py-5 text-param">Short Description</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere recusandae vel doloribus dolores quibusdam, non expedita libero dolor quis consequatur illum inventore eos aliquid dolorum, velit nesciunt fugiat, officia modi!</p>
-                        <div className='py-5 flex flex-wrap gap-x-5 justify-start items-center'>
-                            <SmallCard text='Nest.js'/>
-                            <SmallCard text='React'/>
-                            <SmallCard text='Docker'/>
-                            <SmallCard text='gRPC'/>
-                            <SmallCard text='Postgres SQL'/>
+                {experiences.map((exp, i) => {
+                    const isEven = i % 2 === 0;
+                    return (
+                        <div
+                            key={i}
+                            className={`py-4 flex items-start w-full gap-10 ${
+                                isEven ? "flex-row" : "flex-row-reverse"
+                            }`}
+                        >
+                            <div className="w-[40%]">
+                                <div className="flex items-baseline gap-3">
+                                    <span className="text-muted font-mono text-sm">
+                                        {String(i + 1).padStart(2, "0")}.
+                                    </span>
+                                    <h1 className="text-3xl font-bold border-b-2 p-2 text-cmdlet">
+                                        {exp.title}
+                                    </h1>
+                                </div>
+                                <h3 className="text-lg py-5 text-param">{exp.description}</h3>
+                                <p>{exp.body}</p>
+                                <div className="py-5 flex flex-wrap gap-x-5 justify-start items-center">
+                                    {exp.tags.map((tag) => (
+                                        <SmallCard key={tag} text={tag} />
+                                    ))}
+                                </div>
+                                <div className={`flex ${isEven ? "justify-end" : "justify-start"}`}>
+                                    <Button text="Github" logo={<SiGithub size={18} />} />
+                                </div>
+                            </div>
+                            <ImageFrame src={dummy} alt={exp.title} classname="w-[55%]" />
                         </div>
-                        <div className='flex justify-end'>
-                            <Button text='Github' logo={<SiGithub size={18}/>}></Button>
-                        </div>
-                    </div>
-                    <ImageFrame src={dummy} alt="Maklo" classname="w-[55%] h-full" />
-                </div>
+                    );
+                })}
             </div>
         </div>
     )
