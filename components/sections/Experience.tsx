@@ -46,7 +46,7 @@ export function Experience(){
 
     return (
         <div id="experience" className="flex w-full min-h-screen items-center justify-center overflow-x-hidden scroll-mt-10">
-            <div className="w-4/5 flex justify-start items-start gap-3 flex-col py-10">
+            <div className="flex justify-start items-start gap-3 flex-col py-10">
                 <pre className="font-mono text-cmdlet whitespace-pre text-[10px]">{Title}</pre>
                 <div className="w-full border-t-2 border-dashed mb-10"></div>
                 <div className='flex flex-col justify-center gap-20'>

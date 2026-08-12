@@ -15,7 +15,7 @@ export function Hero(){
 
     return (
         <div id="hero" className="flex w-full h-screen items-center justify-center scroll-mt-10">
-            <div className="w-3/5 flex justify-center items-start gap-3 flex-col">
+            <div className="flex justify-center items-start gap-3 flex-col">
                 <h2 className="text-2xl">Hello, I am</h2>
                 <pre className="font-mono text-cmdlet whitespace-pre text-xs">{heroTitle}</pre>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi pariatur voluptatem ab, illum minus deserunt veritatis. Dolore consequatur adipisci voluptate deserunt impedit voluptatem animi. Odio deleniti vitae dolore atque soluta?</p>
