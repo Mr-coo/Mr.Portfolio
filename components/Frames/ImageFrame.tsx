@@ -4,11 +4,12 @@ interface ImageFrameProps {
   src: StaticImageData;
   alt: string;
   classname?: string;
+  frameClass?: string;
 }
 
-export function ImageFrame({ src, alt, classname = "" }: ImageFrameProps) {
+export function ImageFrame({ src, alt, classname = "", frameClass = "aspect-video" }: ImageFrameProps) {
   return (
-    <div className={`${classname} group relative bg-black/20 shadow-lg aspect-video overflow-hidden cursor-pointer`}>
+    <div className={`${classname} ${frameClass} group relative bg-black/20 shadow-lg overflow-hidden cursor-pointer`}>
       <Image
         src={src}
         alt={alt}
