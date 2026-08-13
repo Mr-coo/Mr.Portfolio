@@ -9,7 +9,7 @@ interface SocialButtonProps {
   label: string
 }
 
-const WIDTH = 6 // inner width (in ch) between the corner glyphs
+const WIDTH = 5 // inner width (in ch) between the corner glyphs
 
 const borderDefault = `+${'-'.repeat(WIDTH)}+`
 const borderHover = `•${'='.repeat(WIDTH)}•`
