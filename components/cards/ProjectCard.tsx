@@ -18,7 +18,7 @@ export function ProjectCard({ title, period, description, images, starred = fals
       <p className="text-param text-sm font-bold tracking-[0.2em]">{period.toUpperCase()}</p>
 
       <div className="flex items-center gap-5 w-full">
-        <h1 className="flex items-center gap-2 text-4xl font-bold text-cmdlet whitespace-nowrap">
+        <h1 className="flex items-center gap-2 text-3xl font-bold border-b-2 p-2 text-cmdlet whitespace-nowrap">
           {title}
           {starred && <Star className="fill-cmdlet text-cmdlet" size={26} />}
         </h1>
@@ -34,7 +34,7 @@ export function ProjectCard({ title, period, description, images, starred = fals
 
       <div className="w-full border-t-2 border-dashed" />
 
-      <p className="italic text-foreground text-lg leading-relaxed">{description}</p>
+      <p className="text-foreground">{description}</p>
     </div>
   )
 }
