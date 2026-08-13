@@ -43,7 +43,7 @@ export function Experience(){
                     <pre className="font-mono text-cmdlet whitespace-pre text-[10px]">{Title}</pre>
                 </Reveal>
                 <div className="w-full border-t-2 border-dashed mb-10"></div>
-                <div className='flex flex-col justify-center gap-20'>
+                <div className='flex flex-col justify-center gap-10'>
                     {experiences.map((exp, i) => {
                         const isEven = i % 2 === 0;
                         return (
