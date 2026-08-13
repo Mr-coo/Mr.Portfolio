@@ -6,6 +6,7 @@ const sections = [
   { id: "hero", label: "Hero" },
   { id: "about", label: "About" },
   { id: "experience", label: "Experience" },
+  { id: "projects", label: "Projects" },
 ];
 
 export function Navigation() {
