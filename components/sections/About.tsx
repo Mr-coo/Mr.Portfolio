@@ -40,7 +40,7 @@ export function About(){
                         </h1>
                         <p className="py-5 text-foreground">{description}</p>
                         <h3 className="text-lg text-param">Expertise</h3>
-                        <div className="py-5 flex flex-wrap gap-x-5 gap-y-3 justify-start items-center">
+                        <div className="py-5 flex flex-wrap gap-x-5 gap-y-0 justify-start items-center">
                             {expertise.map((tag) => (
                                 <SmallCard key={tag} text={tag} />
                             ))}
