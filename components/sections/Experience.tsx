@@ -46,7 +46,7 @@ export function Experience(){
                         return (
                             <div
                                 key={i}
-                                className={`py-4 flex justify-between items-start w-full gap-10 ${
+                                className={`py-4 flex justify-between items-center w-full gap-10 ${
                                     isEven ? "flex-row" : "flex-row-reverse"
                                 }`}
                             >
