@@ -3,6 +3,7 @@ import { ImageFrame } from '../Frames/ImageFrame'
 import { SmallCard } from '../cards/SmallCard'
 import { Button } from '../buttons/Button'
 import { SiGithub } from 'react-icons/si';
+import { Reveal } from '../motion/Reveal'
 import { asciiTitle } from '@/lib/asciiTitle';
 
 const experiences = [
@@ -44,8 +45,9 @@ export function Experience(){
                     {experiences.map((exp, i) => {
                         const isEven = i % 2 === 0;
                         return (
-                            <div
+                            <Reveal
                                 key={i}
+                                direction="up"
                                 className={`py-4 flex justify-between items-center w-full gap-10 ${
                                     isEven ? "flex-row" : "flex-row-reverse"
                                 }`}
@@ -68,7 +70,7 @@ export function Experience(){
                                     </div>
                                 </div>
                                 <ImageFrame src={dummy} alt={exp.title} classname="w-[45%]" />
-                            </div>
+                            </Reveal>
                         );
                     })}
                 </div>

@@ -1,6 +1,7 @@
 import dummy from '../../public/dummy.png'
 import { asciiTitle } from '@/lib/asciiTitle'
 import { ProjectCard, type Project } from '../cards/ProjectCard'
+import { Reveal } from '../motion/Reveal'
 
 const projects: Project[] = [
     {
@@ -30,7 +31,9 @@ export function Projects(){
                 <div className="w-full border-t-2 border-dashed mb-10"></div>
                 <div className="flex flex-col gap-24 w-full">
                     {projects.map((project) => (
-                        <ProjectCard key={project.title} {...project} />
+                        <Reveal key={project.title} direction="up">
+                            <ProjectCard {...project} />
+                        </Reveal>
                     ))}
                 </div>
             </div>

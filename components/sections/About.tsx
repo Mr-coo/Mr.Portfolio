@@ -1,6 +1,7 @@
 import dummy from '../../public/dummy.png'
 import { ImageFrame } from '../Frames/ImageFrame'
 import { SmallCard } from '../cards/SmallCard'
+import { Reveal } from '../motion/Reveal'
 import { asciiTitle } from '@/lib/asciiTitle'
 
 const position = "Full-Stack Developer"
@@ -28,8 +29,10 @@ export function About(){
                 <pre className="font-mono text-cmdlet whitespace-pre text-[10px]">{Title}</pre>
                 <div className="w-full border-t-2 border-dashed mb-10"></div>
                 <div className="flex justify-between items-stretch w-full gap-10">
-                    <ImageFrame src={dummy} alt="Portrait" classname="w-[45%]" frameClass="h-auto" />
-                    <div className="w-[45%]">
+                    <Reveal direction="left" className="w-[45%] flex">
+                        <ImageFrame src={dummy} alt="Portrait" classname="w-full" frameClass="h-auto" />
+                    </Reveal>
+                    <Reveal direction="right" className="w-[45%]">
                         <h1 className="text-3xl font-bold border-b-2 p-2 text-cmdlet w-min whitespace-nowrap">
                             {position}
                         </h1>
@@ -40,7 +43,7 @@ export function About(){
                                 <SmallCard key={tag} text={tag} />
                             ))}
                         </div>
-                    </div>
+                    </Reveal>
                 </div>
             </div>
         </div>
