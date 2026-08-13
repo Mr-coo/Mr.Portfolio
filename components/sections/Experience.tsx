@@ -3,6 +3,7 @@ import { ImageFrame } from '../Frames/ImageFrame'
 import { SmallCard } from '../cards/SmallCard'
 import { Button } from '../buttons/Button'
 import { SiGithub } from 'react-icons/si';
+import { asciiTitle } from '@/lib/asciiTitle';
 
 const experiences = [
     {
@@ -32,17 +33,7 @@ const experiences = [
 ];
 
 export function Experience(){
-    const Title =
-`88888888888                                                    88
-88                                                             ""
-88
-88aaaaa      8b,     ,d8  8b,dPPYba,    ,adPPYba,  8b,dPPYba,  88   ,adPPYba,  8b,dPPYba,    ,adPPYba,   ,adPPYba,
-88"""""       \`Y8, ,8P'   88P'    "8a  a8P_____88  88P'   "Y8  88  a8P_____88  88P'   \`"8a  a8"     ""  a8P_____88
-88              )888(     88       d8  8PP"""""""  88          88  8PP"""""""  88       88  8b          8PP"""""""
-88            ,d8" "8b,   88b,   ,a8"  "8b,   ,aa  88          88  "8b,   ,aa  88       88  "8a,   ,aa  "8b,   ,aa
-88888888888  8P'     \`Y8  88\`YbbdP"'    \`"Ybbd8"'  88          88   \`"Ybbd8"'  88       88   \`"Ybbd8"'   \`"Ybbd8"'
-                          88
-                          88 `
+    const Title = asciiTitle("Experience")
 
     return (
         <div id="experience" className="flex w-full min-h-screen items-center justify-center overflow-x-hidden scroll-mt-10">

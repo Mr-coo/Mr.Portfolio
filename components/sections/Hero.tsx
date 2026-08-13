@@ -1,17 +1,10 @@
 import { Button } from "../buttons/Button"
 import { Download } from 'lucide-react';
+import { asciiTitle } from "@/lib/asciiTitle";
 
 
 export function Hero(){
-    const heroTitle = 
-`88b           d88                                                      88           88                                                88  88  
-888b         d888                                                      88           ""                                                88  ""  
-88\`8b       d8'88                                                      88                                                             88      
-88 \`8b     d8' 88  ,adPPYYba,  8b,dPPYba,   ,adPPYba,   ,adPPYba,      88           88  8b,dPPYba,   ,adPPYYba,  8b,dPPYba,   ,adPPYb,88  88  
-88  \`8b   d8'  88  ""     \`Y8  88P'   "Y8  a8"     ""  a8"     "8a     88           88  88P'   \`"8a  ""     \`Y8  88P'   "Y8  a8"    \`Y88  88  
-88   \`8b d8'   88  ,adPPPPP88  88          8b          8b       d8     88           88  88       88  ,adPPPPP88  88          8b       88  88  
-88    \`888'    88  88,    ,88  88          "8a,   ,aa  "8a,   ,a8"     88           88  88       88  88,    ,88  88          "8a,   ,d88  88  
-88     \`8'     88  \`"8bbdP"Y8  88           \`"Ybbd8"'   \`"YbbdP"'      88888888888  88  88       88  \`"8bbdP"Y8  88           \`"8bbdP"Y8  88`
+    const heroTitle = asciiTitle("Marco Linardi")
 
     return (
         <div id="hero" className="flex w-full h-screen items-center justify-center scroll-mt-10">
