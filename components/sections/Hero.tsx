@@ -15,7 +15,7 @@ export function Hero(){
     const heroTitle = asciiTitle("Marco Linardi")
 
     return (
-        <div id="hero" className="flex w-full h-screen items-center justify-center scroll-mt-10">
+        <div id="hero" className="flex w-full h-screen items-center justify-center scroll-mt-10 snap-start">
             <div className="flex justify-center items-start gap-3 flex-col">
                 <Reveal direction="up">
                     <h2 className="text-2xl">Hello, I am</h2>
