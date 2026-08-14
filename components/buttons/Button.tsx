@@ -26,7 +26,7 @@ export function Button({ text, logo, onClick, disabled = false, href }: ButtonPr
     <>
       <div
         className="[grid-area:1/1] transition-opacity duration-200 ease-out
-                   opacity-100 group-hover:opacity-0"
+                   opacity-100 group-hover:opacity-0 flex flex-col items-center"
       >
         <pre className="m-0">{borderDefault}</pre>
         <div className="flex items-center whitespace-pre">
@@ -40,7 +40,7 @@ export function Button({ text, logo, onClick, disabled = false, href }: ButtonPr
 
       <div
         className="[grid-area:1/1] text-cmdlet transition-opacity duration-200 ease-out
-                   opacity-0 group-hover:opacity-100"
+                   opacity-0 group-hover:opacity-100 flex flex-col items-center"
       >
         <pre className="m-0">{borderHover}</pre>
         <div className="flex items-center whitespace-pre">
