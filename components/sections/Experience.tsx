@@ -1,10 +1,10 @@
 import { ImageFrame } from '../Frames/ImageFrame'
 import { SmallCard } from '../cards/SmallCard'
 import { Button } from '../buttons/Button'
-import { SiGithub } from 'react-icons/si';
 import { Reveal } from '../motion/Reveal'
 import { asciiTitle } from '@/lib/asciiTitle';
 import { content } from '@/lib/content';
+import { SocialIcon } from '@/lib/icons';
 
 export function Experience(){
     const Title = asciiTitle(content.experience.title)
@@ -40,9 +40,13 @@ export function Experience(){
                                             <SmallCard key={tag} text={tag} />
                                         ))}
                                     </div>
-                                    {exp.href && (
+                                    {exp.link && (
                                         <div className={`flex ${isEven ? "justify-end" : "justify-start"}`}>
-                                            <Button text="Github" href={exp.href} logo={<SiGithub size={18} />} />
+                                            <Button
+                                                text={exp.link.label}
+                                                href={exp.link.href}
+                                                logo={<SocialIcon name={exp.link.icon} size={18} />}
+                                            />
                                         </div>
                                     )}
                                 </div>

@@ -2,18 +2,20 @@ import type { StaticImageData } from 'next/image'
 import { Star } from 'lucide-react'
 import { ImageFrame } from '../Frames/ImageFrame'
 import { Button } from '../buttons/Button'
+import { SmallCard } from './SmallCard'
 
 export interface Project {
   title: string
   period: string
   description: string
+  techStack: string[]
   // [large left, top right, bottom right]
   images: [StaticImageData, StaticImageData, StaticImageData]
   starred?: boolean
   href?: string
 }
 
-export function ProjectCard({ title, period, description, images, starred = false, href }: Project) {
+export function ProjectCard({ title, period, description, techStack, images, starred = false, href }: Project) {
   return (
     <div className="flex flex-col gap-4 w-full">
       <p className="text-param text-sm font-bold tracking-[0.2em]">{period.toUpperCase()}</p>
@@ -36,6 +38,12 @@ export function ProjectCard({ title, period, description, images, starred = fals
       <div className="w-full border-t-2 border-dashed" />
 
       <p className="text-foreground">{description}</p>
+
+      <div className="flex flex-wrap gap-x-5 gap-y-2 justify-start items-center">
+        {techStack.map((tech) => (
+          <SmallCard key={tech} text={tech} />
+        ))}
+      </div>
     </div>
   )
 }

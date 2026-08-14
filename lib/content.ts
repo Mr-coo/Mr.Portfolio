@@ -28,20 +28,31 @@ export interface NavItem {
   label: string
 }
 
+export interface ExperienceLink {
+  label: string
+  href: string
+  icon: SocialIconName
+}
+
 export interface ExperienceItem {
   title: string
   role: string
   body: string
   tags: string[]
   image: StaticImageData
-  href: string
+  // Optional external link (repo, post, etc.); omitted when there is nothing to link.
+  link?: ExperienceLink
 }
+
+// The link shape as it comes out of the JSON (icon is a plain string there).
+type RawExperienceLink = { label: string; href: string; icon: string }
 
 export interface ProjectItem {
   title: string
   period: string
   starred: boolean
   description: string
+  techStack: string[]
   href: string
   images: [StaticImageData, StaticImageData, StaticImageData]
 }
@@ -60,12 +71,17 @@ export const content = {
   },
   experience: {
     title: raw.experience.title,
-    items: raw.experience.items.map(
-      (item): ExperienceItem => ({
-        ...item,
+    items: raw.experience.items.map((item): ExperienceItem => {
+      const link = (item as { link?: RawExperienceLink }).link
+      return {
+        title: item.title,
+        role: item.role,
+        body: item.body,
+        tags: item.tags,
         image: image(item.image),
-      }),
-    ),
+        ...(link ? { link: { ...link, icon: link.icon as SocialIconName } } : {}),
+      }
+    }),
   },
   projects: {
     title: raw.projects.title,

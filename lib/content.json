@@ -17,7 +17,7 @@
   "hero": {
     "greeting": "Hello, I am",
     "name": "Marco Linardi",
-    "intro": "A Computer Science & Mathematics student and full-stack developer based in Jakarta. I build things end to end — from AI-powered desktop apps to real-time multiplayer backends and microservice platforms — and care about clean architecture, secure auth, and code that holds up in production.",
+    "intro": "A fully scholarship student majoring in Computer Science & Mathematics and a full-stack developer based in Jakarta. I build end-to-end digital products, from frontend and backend development to mobile applications, deployment, and cloud infrastructure.",
     "resume": {
       "label": "Download Resume",
       "href": ""
@@ -26,21 +26,15 @@
   "about": {
     "title": "About",
     "position": "Full-Stack Developer",
-    "description": "I'm a Computer Science & Mathematics scholarship student at Bina Nusantara University (GPA 3.73) who builds reliable software across the stack. My projects span AI desktop apps, real-time multiplayer systems, financial tooling, and microservice platforms — from clean, accessible interfaces to well-structured APIs, secure onboarding flows, and containerized services. I care about maintainable code, thoughtful architecture, and shipping features that actually run in production.",
+    "description": "I'm a Computer Science & Mathematics scholarship student at Bina Nusantara University (GPA 3.73) and a full-stack developer focused on building reliable, scalable software. I work across the entire development lifecycle, from frontend and backend development to mobile applications, cloud infrastructure, and deployment.",
     "expertiseLabel": "Expertise",
     "expertise": [
-      "TypeScript",
-      "React",
-      "Next.js",
-      "NestJS",
-      "Go",
-      "Rust",
-      "Python",
-      "Laravel",
-      "PostgreSQL",
-      "Redis",
-      "Docker",
-      "Kubernetes"
+      "Frontend",
+      "Backend",
+      "Mobile Dev.",
+      "Cloud Infrastructure",
+      "Deployment",
+      "Database Management"
     ],
     "portrait": { "src": "/dummy.png", "alt": "Marco Linardi" }
   },
@@ -50,18 +44,40 @@
       {
         "title": "Laboratory Assistant",
         "role": "Bina Nusantara University · Aug 2024 – Present",
-        "body": "Assist in teaching lab-based courses at BINUS University — delivering lectures and hands-on sessions, authoring exam and practice cases, and guiding students through real-world project work.",
+        "body": "Lecturing lab-based courses at BINUS University — delivering lectures and hands-on sessions, authoring exam and practice cases, and guiding students through real-world project work.",
         "tags": ["Lecturing", "Case Making", "Mentoring", "Real-World Projects"],
-        "image": "/dummy.png",
-        "href": ""
+        "image": "/dummy.png"
+      },
+      {
+        "title": "MAPID See It",
+        "role": "National · Top 50 Finalist · 2026",
+        "body": "Reached the Top 50 finalists of the MAPID See It national competition, building an AI- and geospatial-based website.",
+        "tags": ["AI", "Geospatial", "Web", "Finalist"],
+        "image": "/dummy.png"
       },
       {
         "title": "ICPC 2025",
-        "role": "Intl. Collegiate Programming Contest · Participant",
+        "role": "International · Participant · 2025",
         "body": "Competed in the International Collegiate Programming Contest, solving algorithmic problems under time pressure against university teams worldwide.",
         "tags": ["Algorithms", "Problem Solving", "Competitive Programming"],
         "image": "/dummy.png",
-        "href": ""
+        "link": {
+          "label": "Instagram",
+          "href": "https://www.instagram.com/p/DRY9ynDEn4I/?img_index=9",
+          "icon": "instagram"
+        }
+      },
+      {
+        "title": "Alibaba Cloud",
+        "role": "National · Participant · Full-Stack Developer · 2025",
+        "body": "Took part in Alibaba Cloud's national competition as a full-stack developer, contributing to Payshield-AI — a team-built project.",
+        "tags": ["Full-Stack", "AI", "Cloud"],
+        "image": "/dummy.png",
+        "link": {
+          "label": "Github",
+          "href": "https://github.com/JarjitGASS/Payshield-AI",
+          "icon": "github"
+        }
       }
     ]
   },
@@ -71,9 +87,10 @@
       {
         "title": "MonoClip",
         "period": "Jun 2026",
-        "starred": true,
+        "starred": false,
         "images": ["/dummy.png", "/dummy.png", "/dummy.png"],
-        "description": "A free, offline-capable AI desktop video editor built with Tauri, React, Rust, and Python. It runs Whisper transcription, OPUS-MT caption translation, and rembg background removal fully on-device, with native FFmpeg processing and Google/GitHub OAuth. Built as a PKM-KC 2026 team submission.",
+        "description": "AI-powered desktop video editor that provides professional video editing and AI-assisted features such as automatic transcription, translation, profanity censoring, object tracking, auto-zoom, and background removal, all running locally without requiring a subscription.",
+        "techStack": ["Tauri 2", "React 19", "TypeScript", "Rust", "FFmpeg", "Python", "FastAPI", "Whisper", "OpenCV", "rembg", "U2Net", "PostgreSQL", "JWT", "OAuth"],
         "href": "https://github.com/Mr-coo/MonoClip"
       },
       {
@@ -81,7 +98,8 @@
         "period": "Jul 2026",
         "starred": false,
         "images": ["/dummy.png", "/dummy.png", "/dummy.png"],
-        "description": "A padel-court booking platform built as a NestJS + Next.js 16 monorepo backed by Postgres, Prisma, and Redis. Its standout feature is a Redis-backed email-OTP registration flow that defers user persistence until the code is confirmed, so abandoned signups never leave orphaned records.",
+        "description": "A complete padel club management and booking platform where members can book courts, purchase equipment, register for coaching and memberships, and manage their activities through a personal dashboard, while staff can manage bookings, products, and club operations through an admin panel.",
+        "techStack": ["Next.js", "React", "TypeScript", "NestJS", "PostgreSQL", "Redis", "Docker", "Docker Compose", "Google OAuth"],
         "href": "https://github.com/Mr-coo/FifteenPadel"
       },
       {
@@ -89,15 +107,17 @@
         "period": "May 2025",
         "starred": false,
         "images": ["/dummy.png", "/dummy.png", "/dummy.png"],
-        "description": "A Twitter-style social platform where authenticated users post threads to a shared feed. Built on a Go gRPC microservices backend — an API gateway fronting independent auth and user services bound by shared Protocol Buffers contracts — with a Svelte 5 + Vite frontend over a MySQL data layer.",
-        "href": "https://github.com/Mr-coo/WEB-MR-242"
+        "description": "A social media platform inspired by Twitter/X that allows users to create threaded posts, manage profiles, participate in communities, and interact with a moderation system through an administrative interface.",
+        "techStack": ["Go", "gRPC", "Protocol Buffers", "Svelte 5", "Vite", "TypeScript", "PostgreSQL", "JWT", "RSA"],
+        "href": ""
       },
       {
         "title": "Mygamatotor",
         "period": "May 2026",
         "starred": false,
         "images": ["/dummy.png", "/dummy.png", "/dummy.png"],
-        "description": "A real-time multiplayer game platform with a NestJS + Socket.IO backend and JWT-authenticated game rooms. It secures both the REST and WebSocket layers — including custom socket-handshake authentication — inside an npm-workspaces monorepo with Prisma-backed persistence and shared types.",
+        "description": "A real-time multiplayer mini-game platform featuring multiple competitive games, online rooms and lobbies, player rankings, and a collectible cat system where players can unlock and collect different characters.",
+        "techStack": ["TypeScript", "React 19", "Vite", "NestJS", "Socket.IO", "Prisma", "PostgreSQL", "WebSockets", "npm Workspaces"],
         "href": "https://github.com/Mr-coo/Mygamatotor"
       },
       {
@@ -105,7 +125,8 @@
         "period": "Mar 2025",
         "starred": false,
         "images": ["/dummy.png", "/dummy.png", "/dummy.png"],
-        "description": "A typing-speed practice and testing app pairing a Vue 3 + Vite + TypeScript SPA with an ASP.NET (C#) backend API — a full-stack project spanning the JavaScript and .NET ecosystems, styled with Tailwind CSS.",
+        "description": "A typing practice platform that helps users improve their typing speed and accuracy through structured lessons, practice texts, and performance tracking across individual typing sessions.",
+        "techStack": ["Vue 3", "Vite", "TypeScript", "ASP.NET Core", "C#", ".NET", "PostgreSQL"],
         "href": "https://github.com/Mr-coo/MrTyper"
       },
       {
@@ -113,7 +134,8 @@
         "period": "Jul 2025",
         "starred": false,
         "images": ["/dummy.png", "/dummy.png", "/dummy.png"],
-        "description": "A cross-platform Kotlin/libGDX mobile game with a math-battle theme. A shared, platform-agnostic game core — tile-based battle and home maps, warrior/building entities, and stage managers — is decoupled from Android via a platform-adapter seam, with Firebase Auth and Cloud Firestore backing accounts and cloud data through an MVVM layer.",
+        "description": "An Android strategy game that combines tactical battles with mathematics challenges, allowing players to manage their base, deploy units, fight enemy waves, and progress through increasingly difficult stages.",
+        "techStack": ["Kotlin", "libGDX", "Gradle", "Android", "Java"],
         "href": "https://github.com/Mr-coo/EpicMathSaga"
       }
     ]
