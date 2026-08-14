@@ -40,9 +40,11 @@ export function Experience(){
                                             <SmallCard key={tag} text={tag} />
                                         ))}
                                     </div>
-                                    <div className={`flex ${isEven ? "justify-end" : "justify-start"}`}>
-                                        <Button text="Github" href={exp.href || undefined} logo={<SiGithub size={18} />} />
-                                    </div>
+                                    {exp.href && (
+                                        <div className={`flex ${isEven ? "justify-end" : "justify-start"}`}>
+                                            <Button text="Github" href={exp.href} logo={<SiGithub size={18} />} />
+                                        </div>
+                                    )}
                                 </div>
                                 <ImageFrame src={exp.image} alt={exp.title} classname="w-[45%]" />
                             </Reveal>

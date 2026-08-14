@@ -1,6 +1,6 @@
 {
   "titleBar": {
-    "name": "mr.cooo's",
+    "name": "mr.coo's",
     "suffix": "Portfolio"
   },
   "navigation": [
@@ -10,14 +10,14 @@
     { "id": "projects", "label": "Projects" }
   ],
   "socials": [
-    { "label": "LinkedIn", "href": "https://www.linkedin.com/", "icon": "linkedin" },
-    { "label": "GitHub", "href": "https://github.com/marcolinardi00", "icon": "github" },
-    { "label": "Instagram", "href": "https://www.instagram.com/", "icon": "instagram" }
+    { "label": "LinkedIn", "href": "https://www.linkedin.com/in/marco-linardi-806bb0255/", "icon": "linkedin" },
+    { "label": "GitHub", "href": "https://github.com/Mr-coo", "icon": "github" },
+    { "label": "Email", "href": "mailto:marcolinardi00@gmail.com", "icon": "email" }
   ],
   "hero": {
     "greeting": "Hello, I am",
     "name": "Marco Linardi",
-    "intro": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi pariatur voluptatem ab, illum minus deserunt veritatis. Dolore consequatur adipisci voluptate deserunt impedit voluptatem animi. Odio deleniti vitae dolore atque soluta?",
+    "intro": "A Computer Science & Mathematics student and full-stack developer based in Jakarta. I build things end to end — from AI-powered desktop apps to real-time multiplayer backends and microservice platforms — and care about clean architecture, secure auth, and code that holds up in production.",
     "resume": {
       "label": "Download Resume",
       "href": ""
@@ -26,52 +26,40 @@
   "about": {
     "title": "About",
     "position": "Full-Stack Developer",
-    "description": "I build reliable web applications end to end, from clean and accessible interfaces to well-structured APIs and services. I care about maintainable code, thoughtful architecture, and shipping features that hold up in production.",
+    "description": "I'm a Computer Science & Mathematics scholarship student at Bina Nusantara University (GPA 3.73) who builds reliable software across the stack. My projects span AI desktop apps, real-time multiplayer systems, financial tooling, and microservice platforms — from clean, accessible interfaces to well-structured APIs, secure onboarding flows, and containerized services. I care about maintainable code, thoughtful architecture, and shipping features that actually run in production.",
     "expertiseLabel": "Expertise",
     "expertise": [
       "TypeScript",
       "React",
       "Next.js",
-      "Node.js",
+      "NestJS",
       "Go",
+      "Rust",
+      "Python",
+      "Laravel",
       "PostgreSQL",
+      "Redis",
       "Docker",
       "Kubernetes"
     ],
-    "portrait": { "src": "/dummy.png", "alt": "Portrait" }
+    "portrait": { "src": "/dummy.png", "alt": "Marco Linardi" }
   },
   "experience": {
     "title": "Experience",
     "items": [
       {
-        "title": "Experience 1",
-        "role": "Full-Stack Developer",
-        "body": "Built and maintained scalable web applications using modern frameworks. Collaborated with cross-functional teams to deliver features on tight deadlines while ensuring code quality through testing and reviews.",
-        "tags": ["Nest.js", "React", "Docker", "gRPC", "Postgres SQL"],
+        "title": "Laboratory Assistant",
+        "role": "Bina Nusantara University · Aug 2024 – Present",
+        "body": "Assist in teaching lab-based courses at BINUS University — delivering lectures and hands-on sessions, authoring exam and practice cases, and guiding students through real-world project work.",
+        "tags": ["Lecturing", "Case Making", "Mentoring", "Real-World Projects"],
         "image": "/dummy.png",
         "href": ""
       },
       {
-        "title": "Experience 2",
-        "role": "Backend Engineer",
-        "body": "Designed and implemented RESTful APIs and microservices architecture. Optimized database queries and improved system reliability through monitoring, alerting, and automated deployment pipelines.",
-        "tags": ["Go", "Kubernetes", "Redis", "MongoDB", "Kafka"],
-        "image": "/dummy.png",
-        "href": ""
-      },
-      {
-        "title": "Experience 3",
-        "role": "Frontend Developer",
-        "body": "Developed responsive user interfaces and interactive dashboards. Worked closely with designers to translate Figma mockups into pixel-perfect components with smooth animations and accessibility support.",
-        "tags": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-        "image": "/dummy.png",
-        "href": ""
-      },
-      {
-        "title": "Experience 4",
-        "role": "DevOps Engineer",
-        "body": "Managed CI/CD pipelines and cloud infrastructure across multiple environments. Automated provisioning and deployment processes, reducing release cycles and improving overall system uptime.",
-        "tags": ["AWS", "Terraform", "GitHub Actions", "Docker", "Linux"],
+        "title": "ICPC 2025",
+        "role": "Intl. Collegiate Programming Contest · Participant",
+        "body": "Competed in the International Collegiate Programming Contest, solving algorithmic problems under time pressure against university teams worldwide.",
+        "tags": ["Algorithms", "Problem Solving", "Competitive Programming"],
         "image": "/dummy.png",
         "href": ""
       }
@@ -81,20 +69,52 @@
     "title": "Projects",
     "items": [
       {
-        "title": "JeTe Knight",
-        "period": "Nov 2022 - Jan 2023",
+        "title": "MonoClip",
+        "period": "Jun 2026",
         "starred": true,
         "images": ["/dummy.png", "/dummy.png", "/dummy.png"],
-        "description": "Achieved the creation of a game website, serving as a clone of the renowned Hollow Knight game, complete with a functioning prototype. This project was developed with the primary purpose of facilitating learning for assistantship entrance exams, showcasing my skills in game development and problem-solving.",
-        "href": ""
+        "description": "A free, offline-capable AI desktop video editor built with Tauri, React, Rust, and Python. It runs Whisper transcription, OPUS-MT caption translation, and rembg background removal fully on-device, with native FFmpeg processing and Google/GitHub OAuth. Built as a PKM-KC 2026 team submission.",
+        "href": "https://github.com/Mr-coo/MonoClip"
       },
       {
-        "title": "Portfolio Terminal",
-        "period": "Feb 2023 - Apr 2023",
+        "title": "FifteenPadel",
+        "period": "Jul 2026",
         "starred": false,
         "images": ["/dummy.png", "/dummy.png", "/dummy.png"],
-        "description": "Built a terminal-inspired developer portfolio with figlet-rendered headings, scroll-spy navigation, and reusable ASCII-styled UI components. Focused on a cohesive design system and smooth, accessible interactions across every section.",
-        "href": ""
+        "description": "A padel-court booking platform built as a NestJS + Next.js 16 monorepo backed by Postgres, Prisma, and Redis. Its standout feature is a Redis-backed email-OTP registration flow that defers user persistence until the code is confirmed, so abandoned signups never leave orphaned records.",
+        "href": "https://github.com/Mr-coo/FifteenPadel"
+      },
+      {
+        "title": "Twitter Clone",
+        "period": "May 2025",
+        "starred": false,
+        "images": ["/dummy.png", "/dummy.png", "/dummy.png"],
+        "description": "A Twitter-style social platform where authenticated users post threads to a shared feed. Built on a Go gRPC microservices backend — an API gateway fronting independent auth and user services bound by shared Protocol Buffers contracts — with a Svelte 5 + Vite frontend over a MySQL data layer.",
+        "href": "https://github.com/Mr-coo/WEB-MR-242"
+      },
+      {
+        "title": "Mygamatotor",
+        "period": "May 2026",
+        "starred": false,
+        "images": ["/dummy.png", "/dummy.png", "/dummy.png"],
+        "description": "A real-time multiplayer game platform with a NestJS + Socket.IO backend and JWT-authenticated game rooms. It secures both the REST and WebSocket layers — including custom socket-handshake authentication — inside an npm-workspaces monorepo with Prisma-backed persistence and shared types.",
+        "href": "https://github.com/Mr-coo/Mygamatotor"
+      },
+      {
+        "title": "MrTyper",
+        "period": "Mar 2025",
+        "starred": false,
+        "images": ["/dummy.png", "/dummy.png", "/dummy.png"],
+        "description": "A typing-speed practice and testing app pairing a Vue 3 + Vite + TypeScript SPA with an ASP.NET (C#) backend API — a full-stack project spanning the JavaScript and .NET ecosystems, styled with Tailwind CSS.",
+        "href": "https://github.com/Mr-coo/MrTyper"
+      },
+      {
+        "title": "Epic Math Saga",
+        "period": "Jul 2025",
+        "starred": false,
+        "images": ["/dummy.png", "/dummy.png", "/dummy.png"],
+        "description": "A cross-platform Kotlin/libGDX mobile game with a math-battle theme. A shared, platform-agnostic game core — tile-based battle and home maps, warrior/building entities, and stage managers — is decoupled from Android via a platform-adapter seam, with Firebase Auth and Cloud Firestore backing accounts and cloud data through an MVVM layer.",
+        "href": "https://github.com/Mr-coo/EpicMathSaga"
       }
     ]
   }
