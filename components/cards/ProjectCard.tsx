@@ -10,9 +10,10 @@ export interface Project {
   // [large left, top right, bottom right]
   images: [StaticImageData, StaticImageData, StaticImageData]
   starred?: boolean
+  href?: string
 }
 
-export function ProjectCard({ title, period, description, images, starred = false }: Project) {
+export function ProjectCard({ title, period, description, images, starred = false, href }: Project) {
   return (
     <div className="flex flex-col gap-4 w-full">
       <p className="text-param text-sm font-bold tracking-[0.2em]">{period.toUpperCase()}</p>
@@ -23,7 +24,7 @@ export function ProjectCard({ title, period, description, images, starred = fals
           {starred && <Star className="fill-cmdlet text-cmdlet" size={26} />}
         </h1>
         <div className="flex-1 border-t border-border" />
-        <Button text="See Detail" />
+        <Button text="See Detail" href={href || undefined} />
       </div>
 
       <div className="grid grid-cols-3 grid-rows-2 gap-3 w-full h-[26rem]">

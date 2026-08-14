@@ -1,0 +1,101 @@
+{
+  "titleBar": {
+    "name": "mr.cooo's",
+    "suffix": "Portfolio"
+  },
+  "navigation": [
+    { "id": "hero", "label": "Hero" },
+    { "id": "about", "label": "About" },
+    { "id": "experience", "label": "Experience" },
+    { "id": "projects", "label": "Projects" }
+  ],
+  "socials": [
+    { "label": "LinkedIn", "href": "https://www.linkedin.com/", "icon": "linkedin" },
+    { "label": "GitHub", "href": "https://github.com/marcolinardi00", "icon": "github" },
+    { "label": "Instagram", "href": "https://www.instagram.com/", "icon": "instagram" }
+  ],
+  "hero": {
+    "greeting": "Hello, I am",
+    "name": "Marco Linardi",
+    "intro": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi pariatur voluptatem ab, illum minus deserunt veritatis. Dolore consequatur adipisci voluptate deserunt impedit voluptatem animi. Odio deleniti vitae dolore atque soluta?",
+    "resume": {
+      "label": "Download Resume",
+      "href": ""
+    }
+  },
+  "about": {
+    "title": "About",
+    "position": "Full-Stack Developer",
+    "description": "I build reliable web applications end to end, from clean and accessible interfaces to well-structured APIs and services. I care about maintainable code, thoughtful architecture, and shipping features that hold up in production.",
+    "expertiseLabel": "Expertise",
+    "expertise": [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Node.js",
+      "Go",
+      "PostgreSQL",
+      "Docker",
+      "Kubernetes"
+    ],
+    "portrait": { "src": "/dummy.png", "alt": "Portrait" }
+  },
+  "experience": {
+    "title": "Experience",
+    "items": [
+      {
+        "title": "Experience 1",
+        "role": "Full-Stack Developer",
+        "body": "Built and maintained scalable web applications using modern frameworks. Collaborated with cross-functional teams to deliver features on tight deadlines while ensuring code quality through testing and reviews.",
+        "tags": ["Nest.js", "React", "Docker", "gRPC", "Postgres SQL"],
+        "image": "/dummy.png",
+        "href": ""
+      },
+      {
+        "title": "Experience 2",
+        "role": "Backend Engineer",
+        "body": "Designed and implemented RESTful APIs and microservices architecture. Optimized database queries and improved system reliability through monitoring, alerting, and automated deployment pipelines.",
+        "tags": ["Go", "Kubernetes", "Redis", "MongoDB", "Kafka"],
+        "image": "/dummy.png",
+        "href": ""
+      },
+      {
+        "title": "Experience 3",
+        "role": "Frontend Developer",
+        "body": "Developed responsive user interfaces and interactive dashboards. Worked closely with designers to translate Figma mockups into pixel-perfect components with smooth animations and accessibility support.",
+        "tags": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+        "image": "/dummy.png",
+        "href": ""
+      },
+      {
+        "title": "Experience 4",
+        "role": "DevOps Engineer",
+        "body": "Managed CI/CD pipelines and cloud infrastructure across multiple environments. Automated provisioning and deployment processes, reducing release cycles and improving overall system uptime.",
+        "tags": ["AWS", "Terraform", "GitHub Actions", "Docker", "Linux"],
+        "image": "/dummy.png",
+        "href": ""
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "items": [
+      {
+        "title": "JeTe Knight",
+        "period": "Nov 2022 - Jan 2023",
+        "starred": true,
+        "images": ["/dummy.png", "/dummy.png", "/dummy.png"],
+        "description": "Achieved the creation of a game website, serving as a clone of the renowned Hollow Knight game, complete with a functioning prototype. This project was developed with the primary purpose of facilitating learning for assistantship entrance exams, showcasing my skills in game development and problem-solving.",
+        "href": ""
+      },
+      {
+        "title": "Portfolio Terminal",
+        "period": "Feb 2023 - Apr 2023",
+        "starred": false,
+        "images": ["/dummy.png", "/dummy.png", "/dummy.png"],
+        "description": "Built a terminal-inspired developer portfolio with figlet-rendered headings, scroll-spy navigation, and reusable ASCII-styled UI components. Focused on a cohesive design system and smooth, accessible interactions across every section.",
+        "href": ""
+      }
+    ]
+  }
+}

@@ -1,13 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { content } from "@/lib/content";
 
-const sections = [
-  { id: "hero", label: "Hero" },
-  { id: "about", label: "About" },
-  { id: "experience", label: "Experience" },
-  { id: "projects", label: "Projects" },
-];
+const sections = content.navigation;
 
 export function Navigation() {
   const [active, setActive] = useState(sections[0].id);
