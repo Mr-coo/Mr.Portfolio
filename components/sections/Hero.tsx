@@ -36,7 +36,7 @@ export function Hero(){
                 </Reveal>
                 <Reveal direction="up" delay={0.45} className="w-full">
                     <div className="flex justify-end w-full">
-                        <Button text={resume.label} href={resume.href || undefined} logo={<Download size={18}/>}></Button>
+                        <Button text={resume.label} href={resume.href || undefined} disabled={!resume.href} logo={<Download size={18}/>}></Button>
                     </div>
                 </Reveal>
             </div>

@@ -26,7 +26,7 @@ export function ProjectCard({ title, period, description, techStack, images, sta
           {starred && <Star className="fill-cmdlet text-cmdlet" size={26} />}
         </h1>
         <div className="flex-1 border-t border-border" />
-        <Button text="See Detail" href={href || undefined} />
+        <Button text="See Detail" href={href || undefined} disabled={!href} />
       </div>
 
       <div className="grid grid-cols-3 grid-rows-2 gap-3 w-full h-[26rem]">

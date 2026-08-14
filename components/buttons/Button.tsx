@@ -61,12 +61,13 @@ export function Button({ text, logo, onClick, disabled = false, href }: ButtonPr
       ease: 'easeInOut' as const,
       repeat: Infinity,
     },
-    whileHover: { y: 0, transition: { duration: 0.15, ease: 'easeOut' as const } },
-    whileTap: { y: 0, transition: { duration: 0.1, ease: 'easeOut' as const } },
-    className: 'group grid font-mono text-param disabled:cursor-not-allowed',
+    whileHover: disabled ? undefined : { y: 0, transition: { duration: 0.15, ease: 'easeOut' as const } },
+    whileTap: disabled ? undefined : { y: 0, transition: { duration: 0.1, ease: 'easeOut' as const } },
+    // No `group` when disabled so the hover border swap never triggers.
+    className: `grid font-mono ${disabled ? 'opacity-40 cursor-not-allowed text-muted' : 'text-param group'}`,
   };
 
-  if (href) {
+  if (href && !disabled) {
     return (
       <motion.a
         href={href}
