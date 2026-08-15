@@ -1,10 +1,46 @@
 import type { StaticImageData } from 'next/image'
 import dummy from '@/public/dummy.png'
+import monoClip1 from '@/public/MonoClip/1.png'
+import monoClip2 from '@/public/MonoClip/2.png'
+import monoClip3 from '@/public/MonoClip/3.png'
+import fifteenPadel1 from '@/public/FifteenPadel/1.png'
+import fifteenPadel2 from '@/public/FifteenPadel/2.png'
+import fifteenPadel3 from '@/public/FifteenPadel/3.png'
+import twitterClone1 from '@/public/Twitter Clone/1.png'
+import twitterClone2 from '@/public/Twitter Clone/2.png'
+import twitterClone3 from '@/public/Twitter Clone/3.png'
+import mrGamatoto1 from '@/public/MrGamatoto/1.png'
+import mrGamatoto2 from '@/public/MrGamatoto/2.png'
+import mrGamatoto3 from '@/public/MrGamatoto/3.png'
+import mrTyper1 from '@/public/MrTyper/1.png'
+import mrTyper2 from '@/public/MrTyper/2.png'
+import mrTyper3 from '@/public/MrTyper/3.png'
+import epicMathSaga1 from '@/public/Epic Math Saga/1.png'
+import epicMathSaga2 from '@/public/Epic Math Saga/2.png'
+import epicMathSaga3 from '@/public/Epic Math Saga/3.png'
 import raw from './content.json'
 import type { SocialIconName } from './icons'
 
 const IMAGES: Record<string, StaticImageData> = {
   '/dummy.png': dummy,
+  '/MonoClip/1.png': monoClip1,
+  '/MonoClip/2.png': monoClip2,
+  '/MonoClip/3.png': monoClip3,
+  '/FifteenPadel/1.png': fifteenPadel1,
+  '/FifteenPadel/2.png': fifteenPadel2,
+  '/FifteenPadel/3.png': fifteenPadel3,
+  '/Twitter Clone/1.png': twitterClone1,
+  '/Twitter Clone/2.png': twitterClone2,
+  '/Twitter Clone/3.png': twitterClone3,
+  '/MrGamatoto/1.png': mrGamatoto1,
+  '/MrGamatoto/2.png': mrGamatoto2,
+  '/MrGamatoto/3.png': mrGamatoto3,
+  '/MrTyper/1.png': mrTyper1,
+  '/MrTyper/2.png': mrTyper2,
+  '/MrTyper/3.png': mrTyper3,
+  '/Epic Math Saga/1.png': epicMathSaga1,
+  '/Epic Math Saga/2.png': epicMathSaga2,
+  '/Epic Math Saga/3.png': epicMathSaga3,
 }
 
 function image(path: string): StaticImageData {

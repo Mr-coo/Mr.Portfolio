@@ -88,7 +88,7 @@
         "title": "MonoClip",
         "period": "Jun 2026",
         "starred": false,
-        "images": ["/dummy.png", "/dummy.png", "/dummy.png"],
+        "images": ["/MonoClip/1.png", "/MonoClip/2.png", "/MonoClip/3.png"],
         "description": "AI-powered desktop video editor that provides professional video editing and AI-assisted features such as automatic transcription, translation, profanity censoring, object tracking, auto-zoom, and background removal, all running locally without requiring a subscription.",
         "techStack": ["Tauri 2", "React 19", "TypeScript", "Rust", "FFmpeg", "Python", "FastAPI", "Whisper", "OpenCV", "rembg", "U2Net", "PostgreSQL", "JWT", "OAuth"],
         "href": "https://github.com/Mr-coo/MonoClip"
@@ -97,7 +97,7 @@
         "title": "FifteenPadel",
         "period": "Jul 2026",
         "starred": false,
-        "images": ["/dummy.png", "/dummy.png", "/dummy.png"],
+        "images": ["/FifteenPadel/1.png", "/FifteenPadel/2.png", "/FifteenPadel/3.png"],
         "description": "A complete padel club management and booking platform where members can book courts, purchase equipment, register for coaching and memberships, and manage their activities through a personal dashboard, while staff can manage bookings, products, and club operations through an admin panel.",
         "techStack": ["Next.js", "React", "TypeScript", "NestJS", "PostgreSQL", "Redis", "Docker", "Docker Compose", "Google OAuth"],
         "href": "https://github.com/Mr-coo/FifteenPadel"
@@ -106,16 +106,16 @@
         "title": "Twitter Clone",
         "period": "May 2025",
         "starred": false,
-        "images": ["/dummy.png", "/dummy.png", "/dummy.png"],
+        "images": ["/Twitter Clone/1.png", "/Twitter Clone/2.png", "/Twitter Clone/3.png"],
         "description": "A social media platform inspired by Twitter/X that allows users to create threaded posts, manage profiles, participate in communities, and interact with a moderation system through an administrative interface.",
         "techStack": ["Go", "gRPC", "Protocol Buffers", "Svelte 5", "Vite", "TypeScript", "PostgreSQL", "JWT", "RSA"],
         "href": ""
       },
       {
-        "title": "Mygamatotor",
+        "title": "MrGamatoto",
         "period": "May 2026",
         "starred": false,
-        "images": ["/dummy.png", "/dummy.png", "/dummy.png"],
+        "images": ["/MrGamatoto/1.png", "/MrGamatoto/2.png", "/MrGamatoto/3.png"],
         "description": "A real-time multiplayer mini-game platform featuring multiple competitive games, online rooms and lobbies, player rankings, and a collectible cat system where players can unlock and collect different characters.",
         "techStack": ["TypeScript", "React 19", "Vite", "NestJS", "Socket.IO", "Prisma", "PostgreSQL", "WebSockets", "npm Workspaces"],
         "href": "https://github.com/Mr-coo/Mygamatotor"
@@ -124,7 +124,7 @@
         "title": "MrTyper",
         "period": "Mar 2025",
         "starred": false,
-        "images": ["/dummy.png", "/dummy.png", "/dummy.png"],
+        "images": ["/MrTyper/1.png", "/MrTyper/2.png", "/MrTyper/3.png"],
         "description": "A typing practice platform that helps users improve their typing speed and accuracy through structured lessons, practice texts, and performance tracking across individual typing sessions.",
         "techStack": ["Vue 3", "Vite", "TypeScript", "ASP.NET Core", "C#", ".NET", "PostgreSQL"],
         "href": "https://github.com/Mr-coo/MrTyper"
@@ -133,7 +133,7 @@
         "title": "Epic Math Saga",
         "period": "Jul 2025",
         "starred": false,
-        "images": ["/dummy.png", "/dummy.png", "/dummy.png"],
+        "images": ["/Epic Math Saga/1.png", "/Epic Math Saga/2.png", "/Epic Math Saga/3.png"],
         "description": "An Android strategy game that combines tactical battles with mathematics challenges, allowing players to manage their base, deploy units, fight enemy waves, and progress through increasingly difficult stages.",
         "techStack": ["Kotlin", "libGDX", "Gradle", "Android", "Java"],
         "href": "https://github.com/Mr-coo/EpicMathSaga"
