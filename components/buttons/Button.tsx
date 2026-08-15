@@ -10,11 +10,13 @@ interface ButtonProps {
   disabled?: boolean;
   // When set (and non-empty) the button renders as a link to this URL.
   href?: string;
+  // When true, the link downloads the target file instead of navigating to it.
+  download?: boolean;
 }
 
 const ICON_CHAR_WIDTH = 2; // reserved char-cells for icon + trailing space
 
-export function Button({ text, logo, onClick, disabled = false, href }: ButtonProps) {
+export function Button({ text, logo, onClick, disabled = false, href, download = false }: ButtonProps) {
   const xPad = 3;
   const reserved = logo ? ICON_CHAR_WIDTH : 0;
   const len = text.length + reserved;
@@ -68,11 +70,14 @@ export function Button({ text, logo, onClick, disabled = false, href }: ButtonPr
   };
 
   if (href && !disabled) {
+    // For downloads, keep navigation in the same tab so the browser saves the
+    // file; otherwise open external links in a new tab.
     return (
       <motion.a
         href={href}
-        target="_blank"
-        rel="noopener noreferrer"
+        download={download || undefined}
+        target={download ? undefined : '_blank'}
+        rel={download ? undefined : 'noopener noreferrer'}
         {...motionProps}
       >
         {inner}

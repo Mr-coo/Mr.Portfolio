@@ -20,7 +20,7 @@
     "intro": "A fully scholarship student majoring in Computer Science & Mathematics and a full-stack developer based in Jakarta. I build end-to-end digital products, from frontend and backend development to mobile applications, deployment, and cloud infrastructure.",
     "resume": {
       "label": "Download Resume",
-      "href": ""
+      "href": "/resume.pdf"
     }
   },
   "about": {
@@ -60,7 +60,7 @@
         "role": "International · Participant · 2025",
         "body": "Competed in the International Collegiate Programming Contest, solving algorithmic problems under time pressure against university teams worldwide.",
         "tags": ["Algorithms", "Problem Solving", "Competitive Programming"],
-        "image": "/dummy.png",
+        "image": "/experience/icpc.png",
         "link": {
           "label": "Instagram",
           "href": "https://www.instagram.com/p/DRY9ynDEn4I/?img_index=9",
@@ -72,10 +72,10 @@
         "role": "National · Participant · Full-Stack Developer · 2025",
         "body": "Took part in Alibaba Cloud's national competition as a full-stack developer, contributing to Payshield-AI — a team-built project.",
         "tags": ["Full-Stack", "AI", "Cloud"],
-        "image": "/dummy.png",
+        "image": "/experience/alibaba.png",
         "link": {
           "label": "Github",
-          "href": "https://github.com/JarjitGASS/Payshield-AI",
+          "href": "https://github.com/JarjitGASS/Payshield-AI/tree/dev",
           "icon": "github"
         }
       }
