@@ -20,6 +20,7 @@ import epicMathSaga2 from '@/public/Epic Math Saga/2.png'
 import epicMathSaga3 from '@/public/Epic Math Saga/3.png'
 import experienceIcpc from '@/public/experience/icpc.png'
 import experienceAlibaba from '@/public/experience/alibaba.png'
+import about from '@/public/about.png'
 import raw from './content.json'
 import type { SocialIconName } from './icons'
 
@@ -45,6 +46,7 @@ const IMAGES: Record<string, StaticImageData> = {
   '/Epic Math Saga/3.png': epicMathSaga3,
   '/experience/icpc.png': experienceIcpc,
   '/experience/alibaba.png': experienceAlibaba,
+  '/about.png' : about,
 }
 
 function image(path: string): StaticImageData {

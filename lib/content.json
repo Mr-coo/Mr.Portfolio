@@ -36,7 +36,7 @@
       "Deployment",
       "Database Management"
     ],
-    "portrait": { "src": "/dummy.png", "alt": "Marco Linardi" }
+    "portrait": { "src": "/about.png", "alt": "Marco Linardi" }
   },
   "experience": {
     "title": "Experience",
