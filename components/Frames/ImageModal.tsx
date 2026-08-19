@@ -58,10 +58,10 @@ export function ImageModal({ src, alt, caption, open, onClose }: ImageModalProps
         >
           <motion.div
             onClick={(e) => e.stopPropagation()}
-            initial={{ x: "-100%" }}
+            initial={{ x: "-10%" }}
             animate={{ x: 0 }}
-            exit={{ x: "100%" }}
-            transition={{ type: "tween", ease: "easeInOut", duration: 0.25 }}
+            exit={{ x: "10%" }}
+            transition={{ type: "tween", ease: "easeInOut", duration: 0.35 }}
             className=" rounded-2xl relative flex max-h-[95vh] w-full max-w-6xl flex-col overflow-hidden border border-border bg-background shadow-2xl"
           >
             <div className="flex items-end justify-between gap-4 bg-background-alt">
