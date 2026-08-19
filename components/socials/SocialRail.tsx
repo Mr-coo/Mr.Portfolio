@@ -3,7 +3,7 @@ import { SocialIcon } from '@/lib/icons'
 
 export function SocialRail(){
     return (
-        <div className="fixed left-20 bottom-0 z-40 flex flex-col items-center gap-4">
+        <div className="hidden xl:flex fixed left-8 2xl:left-20 bottom-0 z-40 flex-col items-center gap-4">
             <ul className="flex flex-col items-center gap-1 list-none">
                 {content.socials.map((social) => (
                     <li key={social.label}>

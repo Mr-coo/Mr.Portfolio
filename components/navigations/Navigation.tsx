@@ -27,7 +27,7 @@ export function Navigation() {
   }, []);
 
   return (
-    <nav className="fixed right-8 top-1/2 -translate-y-1/2 z-50">
+    <nav className="hidden xl:block fixed right-8 top-1/2 -translate-y-1/2 z-50">
       <ul className="flex flex-col items-end gap-6 list-none">
         {sections.map(({ id, label }) => {
           const isActive = active === id;

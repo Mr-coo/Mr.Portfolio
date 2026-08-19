@@ -20,16 +20,16 @@ export function ProjectCard({ title, period, description, techStack, images, sta
     <div className="flex flex-col gap-4 w-full">
       <p className="text-param text-sm font-bold tracking-[0.2em]">{period.toUpperCase()}</p>
 
-      <div className="flex items-center gap-5 w-full">
-        <h1 className="flex items-center gap-2 text-3xl font-bold border-b-2 p-2 text-cmdlet whitespace-nowrap">
+      <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5 w-full">
+        <h1 className="flex items-center gap-2 text-2xl sm:text-3xl font-bold border-b-2 p-2 text-cmdlet">
           {title}
-          {starred && <Star className="fill-cmdlet text-cmdlet" size={26} />}
+          {starred && <Star className="fill-cmdlet text-cmdlet shrink-0" size={26} />}
         </h1>
-        <div className="flex-1 border-t border-border" />
+        <div className="hidden sm:block flex-1 border-t border-border" />
         <Button text="See Detail" href={href || undefined} disabled={!href} />
       </div>
 
-      <div className="grid grid-cols-3 grid-rows-2 gap-3 w-full h-[26rem]">
+      <div className="grid grid-cols-3 grid-rows-2 gap-3 w-full h-64 sm:h-80 md:h-[26rem]">
         <ImageFrame src={images[0]} alt={`${title} preview 1`} classname="col-span-2 row-span-2" frameClass="h-auto" />
         <ImageFrame src={images[1]} alt={`${title} preview 2`} classname="col-span-1 row-span-1" frameClass="h-auto" />
         <ImageFrame src={images[2]} alt={`${title} preview 3`} classname="col-span-1 row-span-1" frameClass="h-auto" />

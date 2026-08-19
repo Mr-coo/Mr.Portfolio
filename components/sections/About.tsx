@@ -3,6 +3,7 @@ import { SmallCard } from '../cards/SmallCard'
 import { Reveal } from '../motion/Reveal'
 import { asciiTitle } from '@/lib/asciiTitle'
 import { content } from '@/lib/content'
+import { AsciiArt } from '../ascii/AsciiArt'
 
 export function About(){
     const { title, position, description, expertiseLabel, expertise, portrait } = content.about
@@ -11,16 +12,16 @@ export function About(){
     return (
         <div id="about" className="flex w-full min-h-screen items-center justify-center overflow-x-hidden scroll-mt-10 snap-start">
             <div className="flex justify-start items-start gap-3 flex-col py-10 w-full">
-                <Reveal direction="left">
-                    <pre className="font-mono text-cmdlet whitespace-pre text-[10px]">{Title}</pre>
+                <Reveal direction="left" className="w-full max-w-full">
+                    <AsciiArt art={Title} className="font-mono text-cmdlet text-[10px]" />
                 </Reveal>
                 <div className="w-full border-t-2 border-dashed mb-10"></div>
-                <div className="flex justify-between items-stretch w-full gap-10">
-                    <Reveal direction="left" className="w-[45%] flex">
+                <div className="flex flex-col lg:flex-row lg:justify-between items-stretch w-full gap-8 lg:gap-10">
+                    <Reveal direction="left" className="w-full lg:w-[45%] flex">
                         <ImageFrame src={portrait.src} alt={portrait.alt} classname="w-full" frameClass="h-auto" />
                     </Reveal>
-                    <Reveal direction="right" className="w-[45%]">
-                        <h1 className="text-3xl font-bold border-b-2 p-2 text-cmdlet w-min whitespace-nowrap">
+                    <Reveal direction="right" className="w-full lg:w-[45%]">
+                        <h1 className="text-2xl sm:text-3xl font-bold border-b-2 p-2 text-cmdlet w-fit max-w-full">
                             {position}
                         </h1>
                         <p className="py-5 text-foreground">{description}</p>

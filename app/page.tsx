@@ -9,7 +9,7 @@ import { TitleBar } from "@/components/sections/TitleBar";
 export default function Home() {
 
   return (
-    <div className="px-60">
+    <div className="overflow-x-clip px-5 sm:px-8 md:px-16 lg:px-24 xl:px-40 2xl:px-60">
       <Navigation/>
       <TitleBar/>
       <SocialRail/>

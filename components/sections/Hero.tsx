@@ -5,19 +5,20 @@ import { SocialButton } from "../socials/SocialButton";
 import { Reveal } from "../motion/Reveal";
 import { content } from "@/lib/content";
 import { SocialIcon } from "@/lib/icons";
+import { AsciiArt } from "../ascii/AsciiArt";
 
 export function Hero(){
     const { greeting, name, intro, resume } = content.hero
     const heroTitle = asciiTitle(name)
 
     return (
-        <div id="hero" className="flex w-full h-screen items-center justify-center scroll-mt-10 snap-start">
-            <div className="flex justify-center items-start gap-3 flex-col">
+        <div id="hero" className="flex w-full min-h-screen items-center justify-center py-24 scroll-mt-10 snap-start">
+            <div className="flex justify-center items-start gap-3 flex-col w-full max-w-full">
                 <Reveal direction="up">
-                    <h2 className="text-2xl">{greeting}</h2>
+                    <h2 className="text-xl sm:text-2xl">{greeting}</h2>
                 </Reveal>
-                <Reveal direction="left" delay={0.1}>
-                    <pre className="font-mono text-cmdlet whitespace-pre text-xs">{heroTitle}</pre>
+                <Reveal direction="left" delay={0.1} className="w-full max-w-full">
+                    <AsciiArt art={heroTitle} className="font-mono text-cmdlet text-xs" />
                 </Reveal>
                 <Reveal direction="up" delay={0.25}>
                     <p>{intro}</p>
