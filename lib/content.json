@@ -53,14 +53,19 @@
         "role": "National · Top 50 Finalist · 2026",
         "body": "Reached the Top 50 finalists of the MAPID See It national competition, building an AI- and geospatial-based website.",
         "tags": ["AI", "Geospatial", "Web", "Finalist"],
-        "image": "/dummy.png"
+        "image": "/experience/mapid.png",
+        "link": {
+          "label": "Detail",
+          "href": "https://github.com/Vleeflu/StaSIUN",
+          "icon": "github"
+        }
       },
       {
         "title": "ICPC 2025",
         "role": "International · Participant · 2025",
         "body": "Competed in the International Collegiate Programming Contest, solving algorithmic problems under time pressure against university teams worldwide.",
         "tags": ["Algorithms", "Problem Solving", "Competitive Programming"],
-        "image": "/experience/icpc.png",
+        "image": "/experience/icpc.jpeg",
         "link": {
           "label": "Instagram",
           "href": "https://www.instagram.com/p/DRY9ynDEn4I/?img_index=9",

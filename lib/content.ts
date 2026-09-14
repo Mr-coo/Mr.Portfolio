@@ -18,8 +18,9 @@ import mrTyper3 from '@/public/MrTyper/3.png'
 import epicMathSaga1 from '@/public/Epic Math Saga/1.png'
 import epicMathSaga2 from '@/public/Epic Math Saga/2.png'
 import epicMathSaga3 from '@/public/Epic Math Saga/3.png'
-import experienceIcpc from '@/public/experience/icpc.png'
+import experienceIcpc from '@/public/experience/icpc.jpeg'
 import experienceAlibaba from '@/public/experience/alibaba.png'
+import experienceMapid from '@/public/experience/mapid.png'
 import about from '@/public/about.png'
 import raw from './content.json'
 import type { SocialIconName } from './icons'
@@ -44,8 +45,9 @@ const IMAGES: Record<string, StaticImageData> = {
   '/Epic Math Saga/1.png': epicMathSaga1,
   '/Epic Math Saga/2.png': epicMathSaga2,
   '/Epic Math Saga/3.png': epicMathSaga3,
-  '/experience/icpc.png': experienceIcpc,
+  '/experience/icpc.jpeg': experienceIcpc,
   '/experience/alibaba.png': experienceAlibaba,
+  '/experience/mapid.png': experienceMapid,
   '/about.png' : about,
 }
 
