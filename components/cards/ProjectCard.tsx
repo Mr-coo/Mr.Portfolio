@@ -1,5 +1,6 @@
 import type { StaticImageData } from 'next/image'
-import { Star } from 'lucide-react'
+import { ExternalLink, Star } from 'lucide-react'
+import { SocialIcon } from '@/lib/icons'
 import { ImageFrame } from '../Frames/ImageFrame'
 import { Button } from '../buttons/Button'
 import { SmallCard } from './SmallCard'
@@ -12,10 +13,12 @@ export interface Project {
   // [large left, top right, bottom right]
   images: [StaticImageData, StaticImageData, StaticImageData]
   starred?: boolean
-  href?: string
+  // Each link's button is hidden when null.
+  githubHref?: string | null
+  previewHref?: string | null
 }
 
-export function ProjectCard({ title, period, description, techStack, images, starred = false, href }: Project) {
+export function ProjectCard({ title, period, description, techStack, images, starred = false, githubHref, previewHref }: Project) {
   return (
     <div className="flex flex-col gap-4 w-full">
       <p className="text-param text-sm font-bold tracking-[0.2em]">{period.toUpperCase()}</p>
@@ -26,7 +29,12 @@ export function ProjectCard({ title, period, description, techStack, images, sta
           {starred && <Star className="fill-cmdlet text-cmdlet shrink-0" size={26} />}
         </h1>
         <div className="hidden sm:block flex-1 border-t border-border" />
-        <Button text="See Detail" href={href || undefined} disabled={!href} />
+        {(githubHref || previewHref) && (
+          <div className="flex flex-wrap gap-3">
+            {githubHref && <Button text="GitHub" href={githubHref} logo={<SocialIcon name="github" size={18} />} />}
+            {previewHref && <Button text="Preview" href={previewHref} logo={<ExternalLink size={18} />} />}
+          </div>
+        )}
       </div>
 
       <div className="grid grid-cols-3 grid-rows-2 gap-3 w-full h-64 sm:h-80 md:h-[26rem]">

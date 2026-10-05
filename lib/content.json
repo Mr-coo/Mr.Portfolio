@@ -89,6 +89,26 @@
   "projects": {
     "title": "Projects",
     "items": [
+            {
+        "title": "PPTX Automation",
+        "period": "Feb 2026",
+        "starred": false,
+        "images": ["/PPTX/1.png", "/PPTX/2.png", "/PPTX/3.png"],
+        "description": "An internal tool for BINUS teaching assistants that generates ready-to-present briefing slides for every teaching session straight from the schedule. Assistants filter their classes by initial, download per-session decks, and copy LINE group links and keys, while admins manage the teaching schedule (.xlsx) and PPTX templates through a file manager panel.",
+        "techStack": ["Next.js", "PPTX", "XLSX", "Firebase", "TypeScript", "Tailwind"],
+        "githubHref": "https://github.com/Mr-coo/PPTX_automation_for_brifing",
+        "previewHref": "https://pptx.marcolinardi.site"
+      },
+      {
+        "title": "Arithmancer",
+        "period": "Okt 2026",
+        "starred": false,
+        "images": ["/Arithmancer/1.png", "/Arithmancer/2.png", "/Arithmancer/3.png"],
+        "description": "A pixel-art multiplayer math game where players create or join rooms with a code and fight enemies by solving arithmetic problems, either shooting roaming enemies by typing the last digit of their answer or battling in timed turn-based duels where correct answers hit harder and wrong ones cost time.",
+        "techStack": ["Spring Boot", "WebSockets", "React", "Pharser"],
+        "githubHref": "https://github.com/Mr-coo/Arithmancer",
+        "previewHref": "https://arithmancer.marcolinardi.site"
+      },
       {
         "title": "MonoClip",
         "period": "Jun 2026",
@@ -96,7 +116,8 @@
         "images": ["/MonoClip/1.png", "/MonoClip/2.png", "/MonoClip/3.png"],
         "description": "AI-powered desktop video editor that provides professional video editing and AI-assisted features such as automatic transcription, translation, profanity censoring, object tracking, auto-zoom, and background removal, all running locally without requiring a subscription.",
         "techStack": ["Tauri 2", "React 19", "TypeScript", "Rust", "FFmpeg", "Python", "FastAPI", "Whisper", "OpenCV", "rembg", "U2Net", "PostgreSQL", "JWT", "OAuth"],
-        "href": "https://github.com/Mr-coo/MonoClip"
+        "githubHref": "https://github.com/Mr-coo/MonoClip",
+        "previewHref": null
       },
       {
         "title": "FifteenPadel",
@@ -105,7 +126,8 @@
         "images": ["/FifteenPadel/1.png", "/FifteenPadel/2.png", "/FifteenPadel/3.png"],
         "description": "A complete padel club management and booking platform where members can book courts, purchase equipment, register for coaching and memberships, and manage their activities through a personal dashboard, while staff can manage bookings, products, and club operations through an admin panel.",
         "techStack": ["Next.js", "React", "TypeScript", "NestJS", "PostgreSQL", "Redis", "Docker", "Docker Compose", "Google OAuth"],
-        "href": "https://github.com/Mr-coo/FifteenPadel"
+        "githubHref": "https://github.com/Mr-coo/FifteenPadel",
+        "previewHref": null
       },
       {
         "title": "Twitter Clone",
@@ -114,7 +136,8 @@
         "images": ["/Twitter Clone/1.png", "/Twitter Clone/2.png", "/Twitter Clone/3.png"],
         "description": "A social media platform inspired by Twitter/X that allows users to create threaded posts, manage profiles, participate in communities, and interact with a moderation system through an administrative interface.",
         "techStack": ["Go", "gRPC", "Protocol Buffers", "Svelte 5", "Vite", "TypeScript", "PostgreSQL", "JWT", "RSA"],
-        "href": ""
+        "githubHref": null,
+        "previewHref": null
       },
       {
         "title": "MrGamatoto",
@@ -123,7 +146,8 @@
         "images": ["/MrGamatoto/1.png", "/MrGamatoto/2.png", "/MrGamatoto/3.png"],
         "description": "A real-time multiplayer mini-game platform featuring multiple competitive games, online rooms and lobbies, player rankings, and a collectible cat system where players can unlock and collect different characters.",
         "techStack": ["TypeScript", "React 19", "Vite", "NestJS", "Socket.IO", "Prisma", "PostgreSQL", "WebSockets", "npm Workspaces"],
-        "href": "https://github.com/Mr-coo/Mygamatotor"
+        "githubHref": "https://github.com/Mr-coo/Mygamatotor",
+        "previewHref": null
       },
       {
         "title": "MrTyper",
@@ -132,7 +156,8 @@
         "images": ["/MrTyper/1.png", "/MrTyper/2.png", "/MrTyper/3.png"],
         "description": "A typing practice platform that helps users improve their typing speed and accuracy through structured lessons, practice texts, and performance tracking across individual typing sessions.",
         "techStack": ["Vue 3", "Vite", "TypeScript", "ASP.NET Core", "C#", ".NET", "PostgreSQL"],
-        "href": "https://github.com/Mr-coo/MrTyper"
+        "githubHref": "https://github.com/Mr-coo/MrTyper",
+        "previewHref": null
       },
       {
         "title": "Epic Math Saga",
@@ -141,7 +166,8 @@
         "images": ["/Epic Math Saga/1.png", "/Epic Math Saga/2.png", "/Epic Math Saga/3.png"],
         "description": "An Android strategy game that combines tactical battles with mathematics challenges, allowing players to manage their base, deploy units, fight enemy waves, and progress through increasingly difficult stages.",
         "techStack": ["Kotlin", "libGDX", "Gradle", "Android", "Java"],
-        "href": "https://github.com/Mr-coo/EpicMathSaga"
+        "githubHref": "https://github.com/Mr-coo/EpicMathSaga",
+        "previewHref": null
       }
     ]
   }

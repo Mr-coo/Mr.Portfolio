@@ -18,6 +18,12 @@ import mrTyper3 from '@/public/MrTyper/3.png'
 import epicMathSaga1 from '@/public/Epic Math Saga/1.png'
 import epicMathSaga2 from '@/public/Epic Math Saga/2.png'
 import epicMathSaga3 from '@/public/Epic Math Saga/3.png'
+import pptx1 from '@/public/PPTX/1.png'
+import pptx2 from '@/public/PPTX/2.png'
+import pptx3 from '@/public/PPTX/3.png'
+import arithmancer1 from '@/public/Arithmancer/1.png'
+import arithmancer2 from '@/public/Arithmancer/2.png'
+import arithmancer3 from '@/public/Arithmancer/3.png'
 import experienceIcpc from '@/public/experience/icpc.jpeg'
 import experienceAlibaba from '@/public/experience/alibaba.png'
 import experienceMapid from '@/public/experience/mapid.png'
@@ -46,6 +52,12 @@ const IMAGES: Record<string, StaticImageData> = {
   '/Epic Math Saga/1.png': epicMathSaga1,
   '/Epic Math Saga/2.png': epicMathSaga2,
   '/Epic Math Saga/3.png': epicMathSaga3,
+  '/PPTX/1.png': pptx1,
+  '/PPTX/2.png': pptx2,
+  '/PPTX/3.png': pptx3,
+  '/Arithmancer/1.png': arithmancer1,
+  '/Arithmancer/2.png': arithmancer2,
+  '/Arithmancer/3.png': arithmancer3,
   '/experience/icpc.jpeg': experienceIcpc,
   '/experience/alibaba.png': experienceAlibaba,
   '/experience/mapid.png': experienceMapid,
@@ -99,7 +111,9 @@ export interface ProjectItem {
   starred: boolean
   description: string
   techStack: string[]
-  href: string
+  // Repo / live demo links; null hides the corresponding button.
+  githubHref: string | null
+  previewHref: string | null
   images: [StaticImageData, StaticImageData, StaticImageData]
 }
 
@@ -134,6 +148,8 @@ export const content = {
     items: raw.projects.items.map(
       (item): ProjectItem => ({
         ...item,
+        githubHref: (item.githubHref as string | null) || null,
+        previewHref: (item.previewHref as string | null) || null,
         images: item.images.map(image) as [
           StaticImageData,
           StaticImageData,
