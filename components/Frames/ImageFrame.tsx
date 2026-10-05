@@ -2,6 +2,7 @@
 
 import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
+import { ZoomIn } from "lucide-react";
 import { ImageModal } from "./ImageModal";
 
 interface ImageFrameProps {
@@ -20,7 +21,8 @@ export function ImageFrame({ src, alt, classname = "", frameClass = "aspect-vide
       <button
         type="button"
         onClick={() => setOpen(true)}
-        aria-label={`Open ${alt}`}
+        aria-label={`${alt} (click to zoom)`}
+        title="Click to zoom"
         className={`${classname} ${frameClass} group relative block p-0 bg-black/20 shadow-lg overflow-hidden cursor-pointer`}
       >
         <Image
@@ -47,6 +49,18 @@ export function ImageFrame({ src, alt, classname = "", frameClass = "aspect-vide
         <div className="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 text-cmdlet font-mono text-2xl leading-none drop-shadow-[2px_2px_3px_rgba(0,0,0,0.6)]">
           ┘
         </div>
+      </div>
+
+      {/* Always-visible zoom hint so the frame reads as clickable without hovering (touch devices never hover).
+          Sits inside the corner brackets, which grow to inset-6 on hover. */}
+      <div
+        aria-hidden="true"
+        className="absolute z-30 bottom-8 right-8 pointer-events-none flex items-center gap-1.5 px-2 py-1
+                   bg-black/60 font-mono text-xs text-foreground opacity-80
+                   transition-all duration-300 ease-out group-hover:opacity-100 group-hover:text-cmdlet"
+      >
+        <ZoomIn size={14} className="shrink-0" />
+        <span className="hidden sm:inline">click to zoom</span>
       </div>
       </button>
 
