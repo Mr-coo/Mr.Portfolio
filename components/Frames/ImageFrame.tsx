@@ -2,7 +2,7 @@
 
 import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
-import { ZoomIn } from "lucide-react";
+import { Maximize2 } from "lucide-react";
 import { ImageModal } from "./ImageModal";
 
 interface ImageFrameProps {
@@ -51,16 +51,13 @@ export function ImageFrame({ src, alt, classname = "", frameClass = "aspect-vide
         </div>
       </div>
 
-      {/* Always-visible zoom hint so the frame reads as clickable without hovering (touch devices never hover).
-          Sits inside the corner brackets, which grow to inset-6 on hover. */}
+      {/* Expand icon, revealed on hover. Sits inside the corner brackets, which grow to inset-6 on hover. */}
       <div
         aria-hidden="true"
-        className="absolute z-30 bottom-8 right-8 pointer-events-none flex items-center gap-1.5 px-2 py-1
-                   bg-black/60 font-mono text-xs text-foreground opacity-80
-                   transition-all duration-300 ease-out group-hover:opacity-100 group-hover:text-cmdlet"
+        className="absolute z-30 bottom-8 right-8 pointer-events-none p-1.5 rounded-md bg-black/60 text-white
+                   opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100 group-focus-visible:opacity-100"
       >
-        <ZoomIn size={14} className="shrink-0" />
-        <span className="hidden sm:inline">click to zoom</span>
+        <Maximize2 size={16} />
       </div>
       </button>
 
